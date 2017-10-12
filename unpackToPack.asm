@@ -1,0 +1,20 @@
+DATA SEGMENT
+    UNPACKED DW 0203H
+    PACKED DB 0H
+DATA ENDS
+
+CODE SEGMENT
+    ASSUME DS:DATA
+    ASSUME CS:CODE
+    
+START:
+        MOV AX,DATA
+        MOV DS,AX
+        
+        MOV AX,UNPACKED
+        ROR AL,4
+        ROR AX,4
+        MOV PACKED,AL
+        
+CODE ENDS
+END START
