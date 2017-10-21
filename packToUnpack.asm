@@ -1,10 +1,10 @@
 DATA SEGMENT
-    PACKED DB 23H
+    PACKED DB 23H       ; a variable of byte sized in packed form having value 23H
     UNPACKED DW 0H
 DATA ENDS
 
 CODE SEGMENT
-    ASSUME DS:DATA
+    ASSUME DS:DATA      ;populating ds with starting address of data segment
     ASSUME CS:CODE
     
 START:
