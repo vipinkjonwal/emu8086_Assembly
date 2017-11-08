@@ -13,6 +13,7 @@ START:
     MOV DS,AX
     
     MOV AX,0
+    MOV CX,NUMBER
     
 AGAIN:
     MOV BX,TEMP
